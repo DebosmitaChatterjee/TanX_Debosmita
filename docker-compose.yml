@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - my_overlay
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+  cache:
+    image: redis:alpine
+    networks:
+      - my_overlay
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    networks:
+      - my_overlay
+    depends_on:
+      - db
+      - cache
+    deploy:
+      replicas: 3
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+
+  test:
+    build: .
+    command: pytest -v /tests
+    networks:
+      - my_overlay
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+networks:
+  my_overlay:
+    external: true
+
+volumes:
+  db_data:
