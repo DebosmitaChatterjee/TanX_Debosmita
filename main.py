@@ -4,7 +4,7 @@ from datetime import datetime
 def read_data(filepath):
     """Reading the CSV data into a DataFrame."""
     try:
-        return pd.read_csv(filepath orders.csv)
+        return pd.read_csv(filepath)
     except Exception as e:
         print(f"Error reading the CSV file: {e}")
         return pd.DataFrame()
