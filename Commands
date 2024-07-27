@@ -1,0 +1,22 @@
+#bash commands
+
+#Initializing a swarm mode
+docker swarm init
+
+#Creating an overlay network to enable service discovery and load balancing between the containers
+docker network create --driver overlay my_overlay
+
+#Then we define Swarm Services in Docker Compose (docker-compose.yml)
+
+#deploy our stack to Docker Swarm
+docker stack deploy -c docker-compose.yml myapp
+
+#Managing the Swarm
+We can manage our services using various Docker commands:
+
+List Services: docker service ls
+Inspect Service: docker service inspect <service_name>
+Scale Service: docker service scale <service_name>=<num_replicas>
+View Logs: docker service logs <service_name>
+
+
