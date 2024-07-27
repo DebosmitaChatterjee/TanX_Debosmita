@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    volumes:
+      - ./src:/app
+    ports:
+      - "8000:8000"  # Optional: if the app serves on a port
+
+  test:
+    build: .
+    command: pytest -v
+    volumes:
+      - ./tests:/tests
+      - ./src:/app

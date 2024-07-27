@@ -1,0 +1,13 @@
+TASK/
+│
+├── src/
+│   ├── main.py               -> Main Python script with our code  logic
+│
+├── tests/
+│   ├── test.py               -> Pytest tests for our application
+│
+├── .dockerignore             -> Specifies patterns to exclude from Docker context
+├── Dockerfile                -> Dockerfile to build our Python environment
+├── docker-compose.yml        -> Docker Compose file to manage multi-container setup
+├── requirements.txt          -> Python dependencies
+└── README.md                 -> Instructions and project information
