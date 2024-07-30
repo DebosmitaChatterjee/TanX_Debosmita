@@ -3,6 +3,10 @@
 ## Description
 This project is designed to analyze customer orders from an online store, providing detailed reports on revenues by month, product, and customer. The goal is to empower business decision-making with actionable insights that are derived from a given historical data.
 
+Here is the video link
+
+https://www.canva.com/design/DAGMcbFpX6E/5vO49sYv7Zf6vggHFup0jg/watch?utm_content=DAGMcbFpX6E&utm_campaign=designshare&utm_medium=link&utm_source=editor
+
 ## Project Structure
 Below is the directory and file structure of the project that I have executed :
 
