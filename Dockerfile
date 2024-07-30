@@ -11,7 +11,7 @@ COPY ./requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # We are Copying the rest of the application
-COPY ./src /app
+COPY . /app
 
 # The Command to run on container start is 
 CMD ["python", "main.py"]
