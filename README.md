@@ -9,11 +9,11 @@ Below is the directory and file structure of the project that I have executed :
 ```plaintext
 my_project/
 │
-├── src/
+├── MAIN
 │   ├── main.py               # Main Python script with data analysis logic
 │
 ├── tests/
-│   ├── test_main.py          # Tests for the data analysis functions
+│   ├── test.py          # Tests for the data analysis functions
 │
 ├── db/
 │   ├── init.sql              # SQL scripts for database setup
@@ -22,7 +22,7 @@ my_project/
 ├── Dockerfile                # Defines the Docker environment for the app
 ├── docker-compose.yml        # Manages container orchestration for development
 ├── requirements.txt          # Lists dependencies for the project
-└── README.md                 # This file
+└── README.md                 # Describes the project
 ```
 
 
@@ -62,7 +62,7 @@ We need to run tests to ensure the application behaves as required and expected 
 docker-compose run --rm app pytest
 
 ### Accessing the Application
-After we run the docker-compose up command, the application should be accessible via the web browser through the URL , typically http://localhost:PORT where PORT is the port number configured for the web service in our docker-compose.yml.
+After we run the docker-compose up command, the application should be accessible and giving results in the terminal or via  web browser through the URL , typically http://localhost:PORT where PORT is the port number configured for the web service in our docker-compose.yml.
 
 
 
