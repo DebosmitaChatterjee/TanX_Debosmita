@@ -6,23 +6,24 @@ This project is designed to analyze customer orders from an online store, provid
 ## Project Structure
 Below is the directory and file structure of the project that I have executed :
 
-
+```plaintext
 my_project/
-|
-|-- src/
-| |-- main.py # This is the Main Python script with data analysis logic
-|
-|-- tests/
-||-- test_main.py # This contains Tests for the data analysis functions
-|
-|-- db/
-| |-- init.sql # This contains SQL scripts for database setup
-|
-|-- .dockerignore # It Specifies files to ignore in Docker builds
-|-- Dockerfile # It Defines the Docker environment for the app
-|-- docker-compose.yml # It Manages container orchestration for development
-|-- requirements.txt # It Lists dependencies for the project
-|-- README.md # This file
+│
+├── src/
+│   ├── main.py               # Main Python script with data analysis logic
+│
+├── tests/
+│   ├── test_main.py          # Tests for the data analysis functions
+│
+├── db/
+│   ├── init.sql              # SQL scripts for database setup
+│
+├── .dockerignore             # Specifies files to ignore in Docker builds
+├── Dockerfile                # Defines the Docker environment for the app
+├── docker-compose.yml        # Manages container orchestration for development
+├── requirements.txt          # Lists dependencies for the project
+└── README.md                 # This file
+```
 
 
 ## Architecture Overview
